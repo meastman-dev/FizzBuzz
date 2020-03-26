@@ -1,13 +1,22 @@
-for (let i = 1; i < 100; i++){
-    if (i % 3 == 0 && i % 5 == 0){
-        console.log("FizzBuzz");
-    } 
-    else if (i % 3 == 0){
-        console.log("Fizz");
+function fizzbuzz() {
+    let textarray = [];
+    let textarea = document.getElementById('textarea');
+    for(let i = 0; i < 100; i++) {
+        if(i%5 === 0 && i%3 === 0){
+            textarray.push(i + " " + "FizzBuzz");
+        }
+        else if(i%5 === 0){
+            textarray.push(i + " " + "Fizz");
+        }
+        else if(i%3 === 0){
+            textarray.push(i + " " + "Buzz");
+        }
+        else{
+            textarray.push(i);
+        }
+
+        textarea.value = textarray.join("\n");
+            
     }
-    else if (i % 5 == 0){
-        console.log("Buzz");
-    }
-    else
-        console.log(i);
+
 }
